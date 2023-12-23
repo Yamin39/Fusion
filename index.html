@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fusion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#"><img src="src/img/logo.png" alt="FUSION" /></a>
+      </div>
+      <div class="nav-item">
+        <div
+          id="MyClockDisplay"
+          class="clock"
+          title="Bangladeshi Standard Time"
+          onload="showTime()"
+        ></div>
+        <div class="contact">
+          <a href="#">CONTACT </a>
+        </div>
+      </div>
+    </nav>
+    <section class="banner">
+      <div class="banner-c1">
+        <div class="scroll">
+          <p>+ +</p>
+          <span>SCROLL</span>
+        </div>
+        <div class="cursorPos">
+          X . <span class="valueOfX">0</span> <br />
+          Y . <span class="valueOfY">0</span>
+        </div>
+      </div>
+      <div class="banner-hero-wrapper">
+        <div class="banner-hero">
+          <div>
+            <p>• INTRODUCING</p>
+            <h2>
+              A New <br />
+              Generation
+            </h2>
+          </div>
+          <div>
+            <h3 class="desktop-h3">
+              Of Fuel Cell <br />
+              Systems
+            </h3>
+            <h3 class="mobile-h3">
+              Of Fuel Cell Systems
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- cursor tail -->
+    <div class="cursor"></div>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
