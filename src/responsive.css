@@ -1,0 +1,125 @@
+/* small laptop */
+
+@media (max-width: 1080px) {
+  .banner {
+    padding-top: 103px;
+  }
+
+  .banner-hero-wrapper {
+    height: calc(100vh - (103px + 43.2px));
+  }
+
+  .about .p1 {
+    font-size: 13px !important;
+  }
+}
+
+/* tablet */
+
+@media (max-width:800px) {
+  .logo img {
+    width: 20vw;
+  }
+
+  .banner-hero {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 18px;
+  }
+
+  .banner-hero h2 {
+    font-size: 11vw;
+    line-height: 10.5vw;
+  }
+
+  .banner-hero p {
+    font-size: 2.4vw;
+}
+
+  .banner-hero h3 {
+    font-size: 4.4vw;
+}
+
+  .banner-hero .desktop-h3 {
+    display: none;
+  }
+
+  .banner-hero .mobile-h3 {
+    display: block;
+  }
+
+  .about-child1 p {
+    font-size: 2vw;
+  }
+
+  .about-child1 h3 {
+    margin-bottom: 15vw;
+    margin-right: 20vw;
+  }
+
+  .about-c1 h2 {
+    font-size: 4.3vw;
+  }
+
+  .about-c2 p {
+    font-size: 2vw;
+    line-height: 2.4vw;
+  }
+}
+
+/* mobile */
+
+@media (max-width: 600px) {
+  :root {
+    --primary-padding: 0 20px;
+  }
+
+  .logo img {
+    width: 30vw;
+  }
+
+  nav {
+    margin-top: 1.5vw;
+  }
+
+  .nav-item {
+    gap: 20px;
+  }
+
+  .clock,
+  .contact a,
+  .banner-c1 {
+    font-size: 3.5vw;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22vw;
+  }
+
+  .banner-hero-wrapper {
+    padding-bottom: 50px;
+  }
+
+  .banner-hero {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 18px;
+  }
+
+  .banner-hero p {
+    font-size: 3vw;
+  }
+
+  .banner-hero h2 {
+    font-size: 14vw;
+    font-weight: 300;
+    line-height: 13vw;
+  }
+
+  .banner-hero h3 {
+    font-size: 5vw;
+  }
+}

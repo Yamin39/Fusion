@@ -17,8 +17,28 @@ body {
   width: 100%;
   height: 100%;
   background-color: #070509;
-  /* padding: 0 20px; */
 }
+
+/* removing scrollbar */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* scroll animation */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* navbar  */
 
 nav {
   width: 100%;
@@ -29,6 +49,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 999999999999999;
 }
 
 .logo a {
@@ -71,6 +92,8 @@ nav {
   text-decoration: none;
 }
 
+/* banner  */
+
 .banner {
   width: 100%;
   height: 100vh;
@@ -111,7 +134,7 @@ nav {
   display: flex;
   justify-content: start;
   align-items: end;
-  gap: 100px;
+  gap: 8vw;
 }
 
 .banner-hero p {
@@ -139,9 +162,60 @@ nav {
   display: none;
 }
 
+/* about  */
+
+.about-wrapper {
+  width: 100%;
+  height: auto;
+  padding: var(--primary-padding);
+  margin-top: 70px;
+  padding-bottom: 10vw;
+}
+
+.about {
+  padding-top: 70px;
+  border-top: 2px solid #fefefec5;
+}
+
+.about-child1 p {
+  color: #8b8b8b;
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.about-child1 h3 {
+  font-size: 4.5vw;
+  line-height: 4.6vw;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 10vw;
+  margin-right: 28vw;
+}
+
+.about-child2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-c1 {
+  width: 200vw;
+}
+
+.about-c1 h2 {
+  color: #383739;
+  font-size: 3.25vw;
+  font-weight: 500;
+}
+
+.about-c2 p {
+  font-size: 1.8vw;
+  line-height: 2vw;
+}
+
 /* cursor tail */
 
-.cursor {
+/* .cursor {
   width: 20px;
   height: 20px;
   position: fixed;
@@ -159,78 +233,4 @@ nav {
   opacity: 0.2;
   transform: translate(-30%, -30%);
   border-radius: 50%;
-}
-
-/* Media Queries */
-
-@media (max-width: 600px) {
-  :root {
-    --primary-padding: 0 20px;
-  }
-
-  .logo img {
-    width: 28vw;
-  }
-
-  nav {
-    margin-top: 1.5vw;
-  }
-
-  .nav-item {
-    gap: 20px;
-  }
-
-  .clock,
-  .contact a,
-  .banner-c1 {
-    font-size: 3.5vw;
-  }
-
-  .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 22vw;
-  }
-
-  .banner-hero-wrapper {
-    padding-bottom: 50px;
-  }
-
-  .banner-hero {
-    flex-direction: column;
-    align-items: baseline;
-    gap: 18px;
-  }
-
-  .banner-hero p {
-    font-size: 3vw;
-  }
-
-  .banner-hero h2 {
-    font-size: 14vw;
-    font-weight: 300;
-    line-height: 13vw;
-  }
-
-  .banner-hero h3 {
-    font-size: 5vw;
-  }
-
-  .banner-hero .desktop-h3 {
-    display: none;
-  }
-
-  .banner-hero .mobile-h3 {
-    display: block;
-  }
-}
-
-@media (max-width: 1080px) {
-  .banner {
-    padding-top: 103px;
-  }
-  .banner-hero-wrapper {
-    height: calc(100vh - (103px + 43.2px));
-  }
-}
+} */
