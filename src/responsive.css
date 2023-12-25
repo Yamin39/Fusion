@@ -17,6 +17,7 @@
 /* tablet */
 
 @media (max-width:800px) {
+  
   .logo img {
     width: 20vw;
   }
@@ -64,6 +65,16 @@
   .about-c2 p {
     font-size: 2vw;
     line-height: 2.4vw;
+  }
+
+  .circle {
+    animation: cssAnimation 0s ease-in 5s forwards;
+    animation-fill-mode: forwards;
+  }
+  @keyframes cssAnimation {
+    to {
+        opacity: 0;
+    }
   }
 }
 
@@ -121,5 +132,35 @@
 
   .banner-hero h3 {
     font-size: 5vw;
+  }
+
+  .about-child1 p {
+    font-size: 3.5vw;
+  }
+
+  .about-child1 h3 {
+    font-size: 6.5vw;
+    line-height: 6.4vw;
+    margin-right: 5vw;
+    letter-spacing: normal;
+  }
+
+  .about-child2 {
+    flex-direction: column;
+  }
+
+  .about-c1 {
+    width: auto;
+  }
+
+  .about-c1 h2 {
+    font-size: 6.4vw;
+    margin-bottom: 5vw;
+  }
+
+  .about-c2 p {
+    font-size: 3.5vw;
+    line-height: 4.4vw;
+    margin-right: 10vw;
   }
 }

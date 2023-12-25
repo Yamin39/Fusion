@@ -35,9 +35,17 @@ const circles = document.querySelectorAll(".circle");
 const posValueX = document.querySelector(".valueOfX");
 const posValueY = document.querySelector(".valueOfY");
 
+document.addEventListener("mouseleave", function () {
+    gsap.to(circles,{
+      opacity:0
+    })
+  });
 window.addEventListener("mousemove", function (e) {
   coords.x = e.clientX;
   coords.y = e.clientY;
+  gsap.to(circles,{
+    opacity:0.25
+  })
 });
 
 function animateCircles() {
@@ -59,13 +67,12 @@ function animateCircles() {
     });
     
     requestAnimationFrame(animateCircles);
-    
+
     posValueX.innerHTML = x;
     posValueY.innerHTML = y;
 }
-
+    
 animateCircles();
-
 
 // scroll animation
 
