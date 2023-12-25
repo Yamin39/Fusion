@@ -30,33 +30,42 @@ showTime();
 
 // cursor tail
 
-const cursor = document.querySelector(".cursor");
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
 const posValueX = document.querySelector(".valueOfX");
 const posValueY = document.querySelector(".valueOfY");
-var timeout;
 
-document.addEventListener("mousemove", (e) => {
-	let x = e.pageX;
-	let y = e.pageY;
+window.addEventListener("mousemove", function (e) {
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+});
 
-	cursor.style.top = y + "px";
-	cursor.style.left = x + "px";
-	cursor.style.display = "block";
-	
+function animateCircles() {
+    let x = coords.x;
+    let y = coords.y;
     
-	// cursor tail will stop while mouse isn't moving  
-	function mouseStopped(){
-        cursor.style.display = "none";
-	}
-	// clearTimeout(timeout);
-	timeout = setTimeout(mouseStopped, -1);
+    circles.forEach(function (circle, index) {
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        
+        circle.style.scale = (circles.length - index) / circles.length;
+        
+        circle.x = x;
+        circle.y = y;
+        
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+    });
+    
+    requestAnimationFrame(animateCircles);
+    
     posValueX.innerHTML = x;
     posValueY.innerHTML = y;
-});
+}
 
-document.addEventListener("mouseout", () => {
-	cursor.style.display = "none";
-});
+animateCircles();
+
 
 // scroll animation
 
