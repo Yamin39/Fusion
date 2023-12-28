@@ -16,8 +16,11 @@
 
 /* tablet */
 
-@media (max-width:800px) {
-  
+@media (max-width: 800px) {
+  :root {
+    --gfs: 744;
+  }
+
   .logo img {
     width: 20vw;
   }
@@ -35,11 +38,11 @@
 
   .banner-hero p {
     font-size: 2.4vw;
-}
+  }
 
   .banner-hero h3 {
     font-size: 4.4vw;
-}
+  }
 
   .banner-hero .desktop-h3 {
     display: none;
@@ -67,14 +70,24 @@
     line-height: 2.4vw;
   }
 
-  .circle {
-    animation: cssAnimation 0s ease-in 5s forwards;
-    animation-fill-mode: forwards;
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 calc((71 / var(--gfs)) * 100 * 1vw);
+    grid-template-columns: 1fr;
+    gap: calc((30 / var(--gfs)) * 100 * 1vw);
   }
-  @keyframes cssAnimation {
-    to {
-        opacity: 0;
-    }
+
+  .card-wrapper .card {
+    width: 100%;
+    /* height: calc((550 / var(--gfs)) * 100 * 1vw); */
+    padding: calc((31 / var(--gfs)) * 100 * 1vw)
+      calc((20 / var(--gfs)) * 100 * 1vw) calc((6 / var(--gfs)) * 100 * 1vw);
+    border-radius: calc((14 / var(--gfs)) * 100 * 1vw);
+  }
+
+  .card .c1-child2 img {
+    width: 10vw;
   }
 }
 

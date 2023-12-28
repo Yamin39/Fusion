@@ -2,6 +2,8 @@
 
 :root {
   --primary-padding: 0 40px;
+  --gfs: 1920;
+  --dark-gray-color: #8b8b8b;
 }
 
 * {
@@ -183,7 +185,7 @@ nav {
 }
 
 .about-child1 p {
-  color: #8b8b8b;
+  color: var(--dark-gray-color);
   font-size: 1.2vw;
   font-weight: 500;
   margin-bottom: 20px;
@@ -216,6 +218,73 @@ nav {
 .about-c2 p {
   font-size: 1.8vw;
   line-height: 2vw;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: auto;
+  padding: var(--primary-padding);
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-wrapper .card {
+  width: 31.4%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc((745 / var(--gfs)) * 100 * 1vw);
+  background-color: rgba(14, 14, 14, 255);
+  padding: calc((35 / var(--gfs)) * 100 * 1vw)
+    calc((38 / var(--gfs)) * 100 * 1vw) calc((11 / var(--gfs)) * 100 * 1vw);
+  border-radius: calc((15 / var(--gfs)) * 100 * 1vw);
+}
+
+.card .c1-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .c1 p {
+  font-size: calc((16 / var(--gfs)) * 100 * 1vw);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--dark-gray-color);
+}
+
+.card .c1-child2 img {
+  width: 4.5vw;
+  margin-top: calc((21 / var(--gfs)) * 100 * 1vw);
+}
+
+.c2 .c2-child p {
+  color: var(--dark-gray-color);
+  font-size: calc((24 / var(--gfs)) * 100 * 1vw);
+  line-height: 1.38;
+}
+.c2 .c2-child {
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+  border-bottom: 2px solid var(--dark-gray-color);
+  max-width: calc((460 / var(--gfs))*100*1vw);
+  padding-bottom: calc((14 / var(--gfs))*100*1vw);
+  margin-bottom: calc((34 / var(--gfs))*100*1vw);
+}
+
+.c2 .c2-child i {
+  color: var(--dark-gray-color);
+  font-size: calc((16 / var(--gfs)) * 100 * 1vw);
+}
+
+.c2 .c2-child2 h1 {
+  font-size: calc((188 / var(--gfs))*100*1vw);
+  line-height: 1;
+  font-weight: 200;
 }
 
 /* cursor tail */
