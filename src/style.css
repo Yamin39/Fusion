@@ -299,6 +299,16 @@ nav {
   background-size: cover;
 }
 
+/* marquee */
+
+.marquee-wrapper {
+  padding: 100px 0;
+}
+
+.marquee-wrapper marquee {
+  font-size: 10vw;
+}
+
 /* cursor tail */
 
 .circle {

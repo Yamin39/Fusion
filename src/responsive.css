@@ -233,4 +233,14 @@
   .c2 .c2-child2 h1 {
     font-size: calc((100 / var(--gfs)) * 100 * 1vw);
   }
+
+  /* marquee */
+
+  .marquee-wrapper {
+    padding: 10vw 0;
+  }
+
+  .marquee-wrapper marquee {
+    font-size: 12.5vw;
+  }
 }
