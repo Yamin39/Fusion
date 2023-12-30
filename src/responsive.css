@@ -1,6 +1,8 @@
 /* small laptop */
 
 @media (max-width: 1080px) {
+  /* banner  */
+
   .banner {
     padding-top: 103px;
   }
@@ -8,6 +10,8 @@
   .banner-hero-wrapper {
     height: calc(100vh - (103px + 43.2px));
   }
+
+  /* about  */
 
   .about .p1 {
     font-size: 13px !important;
@@ -21,9 +25,13 @@
     --gfs: 744;
   }
 
+  /* nav  */
+
   .logo img {
     width: 20vw;
   }
+
+  /* banner  */
 
   .banner-hero {
     flex-direction: column;
@@ -52,6 +60,8 @@
     display: block;
   }
 
+  /* about  */
+
   .about-child1 p {
     font-size: 2vw;
   }
@@ -70,12 +80,15 @@
     line-height: 2.4vw;
   }
 
+  /* card  */
+
   .card-wrapper {
     flex-direction: column;
     align-items: center;
     padding: 0 calc((71 / var(--gfs)) * 100 * 1vw);
     grid-template-columns: 1fr;
     gap: calc((30 / var(--gfs)) * 100 * 1vw);
+    padding-bottom: 85px;
   }
 
   .card-wrapper .card {
@@ -96,7 +109,10 @@
 @media (max-width: 600px) {
   :root {
     --primary-padding: 0 20px;
+    --gfs: 375;
   }
+
+  /* nav */
 
   .logo img {
     width: 30vw;
@@ -123,6 +139,8 @@
     width: 22vw;
   }
 
+  /* banner  */
+
   .banner-hero-wrapper {
     padding-bottom: 50px;
   }
@@ -146,6 +164,8 @@
   .banner-hero h3 {
     font-size: 5vw;
   }
+
+  /* about  */
 
   .about-child1 p {
     font-size: 3.5vw;
@@ -175,5 +195,42 @@
     font-size: 3.5vw;
     line-height: 4.4vw;
     margin-right: 10vw;
+  }
+
+  /* card  */
+
+  .card-wrapper {
+    padding: 0 30px 85px 30px;
+  }
+
+  .card-wrapper .card {
+    width: 100%;
+    background-color: #1818188a;
+    height: calc((360 / var(--gfs)) * 100 * 1vw);
+  }
+
+  .card .c1 p {
+    font-size: max(12px, calc((12 / var(--gfs)) * 100 * 1vw));
+  }
+
+  .card .c1-child2 img {
+    width: 14vw;
+  }
+
+  .c2 .c2-child p {
+    font-size: max(12px, calc((14 / var(--gfs)) * 100 * 1vw));
+  }
+
+  .c2 .c2-child i {
+    font-size: 3vw;
+    margin-left: 1vw;
+  }
+
+  .c2 .c2-child {
+    max-width: 85%;
+  }
+
+  .c2 .c2-child2 h1 {
+    font-size: calc((100 / var(--gfs)) * 100 * 1vw);
   }
 }
