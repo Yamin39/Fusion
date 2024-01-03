@@ -309,6 +309,31 @@ nav {
   font-size: 10vw;
 }
 
+/* footer */
+
+.footer-wrapper {
+  padding: var(--primary-padding);
+}
+
+.footer-wrapper footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc((42 / var(--gfs))*100*1vw) 0 calc((25 / var(--gfs))*100*1vw);
+  font-size: calc((24 / var(--gfs))*100*1vw);
+  line-height: 1.2;
+  font-weight: 500;
+  border-top: 1px solid #555;
+}
+
+.footer-wrapper footer .c3 a {
+  text-decoration: none;
+}
+
+.footer-wrapper footer .c3 i {
+  font-size: 0.8vw;
+}
+
 /* cursor tail */
 
 .circle {
