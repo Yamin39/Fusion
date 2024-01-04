@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap");
+
+:root {
+  --primary-padding: 0 40px;
+  --gfs: 1920;
+  --dark-gray-color: #8b8b8b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+}
+
+*::selection {
+  color: white;
+  background-color: #a59f98;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #070509;
+}
+
+/* removing scrollbar */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* scroll animation */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* navbar  */
+
+nav {
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  margin-top: 20px;
+  padding: var(--primary-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999999999999999;
+}
+
+.logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 10vmax;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.clock {
+  cursor: default;
+}
+
+.home {
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 99999999;
+}
+
+.home:hover {
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+}
+
+.home-btn {
+  text-decoration: none;
+}
+
+/* contact  */
+
+.contact-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+/* footer */
+
+.footer-wrapper {
+    padding: var(--primary-padding);
+  }
+  
+  .footer-wrapper footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc((42 / var(--gfs))*100*1vw) 0 calc((25 / var(--gfs))*100*1vw);
+    font-size: calc((24 / var(--gfs))*100*1vw);
+    line-height: 1.2;
+    font-weight: 500;
+    border-top: 1px solid #555;
+  }
+  
+  .footer-wrapper footer .c3 a {
+    text-decoration: none;
+  }
+  
+  .footer-wrapper footer .c3 i {
+    font-size: 0.8vw;
+  }
+  
+  /* cursor tail */
+  
+  .circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #d0d0d0db;
+    filter: blur(1px);
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.15s;
+    z-index: 99999999999999;
+  }
+  
